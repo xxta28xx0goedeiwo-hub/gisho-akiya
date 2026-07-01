@@ -136,9 +136,8 @@ header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.35); }
 .hero-bg {
   position: absolute; inset: 0;
   background: linear-gradient(135deg, #06101f 0%, #0e2a5e 60%, #1a3a6e 100%);
-  /* ★写真を入れる場合:
-     background-image: url('../images/hero.jpg');
-     background-size: cover; background-position: center; */
+  background-image: url('../images/hero.jpg');
+  background-size: cover; background-position: center;
 }
 .hero-bg::after {
   content: ''; position: absolute; inset: 0;
@@ -235,13 +234,9 @@ header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.35); }
   position: absolute; inset: 0;
   background-size: cover; background-position: center;
 }
-.service-block.bg-akiya   .service-bg { background: linear-gradient(135deg,#0a1628,#162540); }
-.service-block.bg-akichi  .service-bg { background: linear-gradient(135deg,#081a08,#162a14); }
-.service-block.bg-subsidy .service-bg { background: linear-gradient(135deg,#1a1406,#24200a); }
-/* ★写真追加方法:
-   .bg-akiya   .service-bg { background-image: url('../images/akiya.jpg'); }
-   .bg-akichi  .service-bg { background-image: url('../images/akichi.jpg'); }
-   .bg-subsidy .service-bg { background-image: url('../images/subsidy.jpg'); }  */
+.service-block.bg-akiya   .service-bg { background: linear-gradient(135deg,#0a1628,#162540); background-image: url('../images/akiya.jpg'); background-size: cover; background-position: center; }
+.service-block.bg-akichi  .service-bg { background: linear-gradient(135deg,#081a08,#162a14); background-image: url('../images/akichi.jpg'); background-size: cover; background-position: center; }
+.service-block.bg-subsidy .service-bg { background: linear-gradient(135deg,#1a1406,#24200a); background-image: url('../images/subsidy.jpg'); background-size: cover; background-position: center; }
 .service-bg::after {
   content: ''; position: absolute; inset: 0;
   background: rgba(0,0,0,.56);
