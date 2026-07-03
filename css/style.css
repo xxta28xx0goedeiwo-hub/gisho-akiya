@@ -625,3 +625,58 @@ footer { background: var(--dark); padding: 64px 0 32px; }
   .hero-btns a { width: 100%; text-align: center; }
   .flow-item { width: calc(50% - 8px); }
 }
+
+/* ─── DEMOLITION CONSULTATION WIZARD ─── */
+.section-form-wizard { padding: 72px 0; background: var(--light); }
+.wizard-box { max-width: 640px; margin: 0 auto; background: white; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,.06); }
+.wizard-banner { background: linear-gradient(135deg, var(--navy), var(--blue)); padding: 28px 24px; text-align: center; }
+.wizard-banner p { color: white; font-size: 16px; font-weight: 900; margin-bottom: 12px; }
+.wizard-banner-tags { display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; }
+.wizard-banner-tags span { background: white; color: #ea580c; font-size: 13px; font-weight: 900; padding: 6px 16px; border-radius: 4px; }
+.wizard-banner-tags { color: white; font-size: 13px; font-weight: 700; }
+.wizard-progress { display: flex; align-items: center; gap: 12px; background: var(--mist); padding: 14px 24px; }
+.wizard-progress-bar { flex: 1; height: 6px; background: #dbe6f0; border-radius: 4px; overflow: hidden; }
+.wizard-progress-fill { height: 100%; width: 7.14%; background: var(--blue); border-radius: 4px; transition: width .3s; }
+.wizard-progress-label { font-size: 12px; font-weight: 700; color: var(--gray); white-space: nowrap; }
+.wizard-body { padding: 32px 28px; }
+.wizard-step { display: none; }
+.wizard-step.active { display: block; }
+.wizard-q { font-size: 16px; font-weight: 900; color: var(--navy); margin-bottom: 20px; }
+.wizard-list { display: flex; flex-direction: column; gap: 10px; }
+.wizard-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.wizard-choice {
+  display: flex; align-items: center; gap: 12px;
+  width: 100%; padding: 14px 18px; text-align: left;
+  border: 2px solid #e5e7eb; border-radius: 6px; background: white;
+  font-family: inherit; font-size: 14px; font-weight: 700; color: var(--text);
+  cursor: pointer; transition: all .2s;
+}
+.wizard-choice:hover { border-color: var(--sky); }
+.wizard-choice.selected { border-color: var(--blue); background: var(--mist); }
+.wizard-choice .dot { flex-shrink: 0; width: 16px; height: 16px; border-radius: 50%; border: 2px solid #d1d5db; }
+.wizard-choice.selected .dot { border-color: var(--blue); background: var(--blue); }
+.wizard-grid-2 .wizard-choice { flex-direction: column; text-align: center; padding: 18px 10px; }
+.wizard-grid-2 .wizard-choice .icon { font-size: 28px; }
+.wizard-back { display: inline-block; margin-top: 24px; background: none; border: none; font-family: inherit; font-size: 12px; font-weight: 700; color: var(--gray); cursor: pointer; }
+.wizard-back:hover { text-decoration: underline; }
+.wizard-company-input { margin-top: 16px; }
+.wizard-next-btn {
+  margin-top: 16px; width: 100%; padding: 12px; border: none; border-radius: 999px;
+  background: var(--blue); color: white; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer;
+}
+.wizard-next-btn:hover { background: var(--navy); }
+.wizard-final-actions { display: flex; gap: 12px; margin-top: 8px; }
+.wizard-final-actions .form-submit { flex: 1; margin-top: 0; }
+.wizard-btn-prev {
+  padding: 0 24px; border: 2px solid #d1d5db; border-radius: 999px; background: white;
+  color: var(--gray); font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer;
+}
+.wizard-footnote { text-align: center; font-size: 12px; color: var(--gray); padding: 0 28px 28px; }
+.wizard-note { font-size: 12px; color: var(--gray); line-height: 1.9; margin-top: 16px; }
+.wizard-done { padding: 48px 28px; text-align: center; }
+.wizard-done p:first-child { font-size: 16px; font-weight: 900; color: var(--navy); margin-bottom: 12px; }
+.wizard-done p { font-size: 13px; color: var(--gray); line-height: 1.9; }
+@media (max-width: 480px) {
+  .wizard-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .wizard-body { padding: 24px 20px; }
+}
