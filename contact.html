@@ -84,16 +84,8 @@
         <!-- RIGHT: Form -->
         <div>
           <h3 style="font-size:16px;font-weight:700;color:#0e2a5e;margin-bottom:24px;">メールでのお問い合わせ</h3>
-          <!--
-            ★ フォームの実装方法:
-            1. Googleフォームを作成してiframeで埋め込む（最も簡単）
-            2. FormrunやMicrocmsなどのフォームサービスを利用する
-            3. PHPメールフォームを使用する（サーバーが必要）
-
-            下記はデモ用のHTMLフォームです。
-            実際に送信するには上記いずれかの方法で実装してください。
-          -->
-          <form action="#" method="post">
+          <form action="https://formspree.io/f/xwvdapea" method="POST">
+            <input type="hidden" name="_subject" value="【義翔工業HP】お問い合わせ">
             <div class="form-group">
               <label>お名前 <span class="req">必須</span></label>
               <input type="text" name="name" placeholder="例：山田 太郎" required>
@@ -128,9 +120,6 @@
             <button type="submit" class="form-submit">
               送信する（相談・見積もりは無料です）
             </button>
-            <p style="margin-top:12px;font-size:11px;color:#9ca3af;text-align:center;">
-              ★ このフォームはデモ用です。実際の送信機能を実装してください。
-            </p>
           </form>
         </div>
 
