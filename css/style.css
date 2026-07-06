@@ -237,6 +237,7 @@ header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.35); }
 .service-block.bg-akiya   .service-bg { background: linear-gradient(135deg,#0a1628,#162540); background-image: url('../images/akiya.jpg'); background-size: cover; background-position: center; }
 .service-block.bg-akichi  .service-bg { background: linear-gradient(135deg,#081a08,#162a14); background-image: url('../images/akichi.jpg'); background-size: cover; background-position: center; }
 .service-block.bg-subsidy .service-bg { background: linear-gradient(135deg,#1a1406,#24200a); background-image: url('../images/subsidy.jpg'); background-size: cover; background-position: center; }
+.service-block.bg-properties .service-bg { background: linear-gradient(135deg,#0e2a5e,#1e5fa8); }
 .service-bg::after {
   content: ''; position: absolute; inset: 0;
   background: rgba(0,0,0,.56);
