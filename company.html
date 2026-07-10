@@ -24,13 +24,22 @@
   <header id="header">
     <div class="header-inner">
       <a href="index.html" class="header-logo">
-        <div class="logo-mark">義</div>
+        <div class="logo-mark"><img src="images/logo-icon.png" alt="義翔工業"></div>
         <div>
           <span class="logo-name">株式会社義翔工業</span>
           <span class="logo-sub">空き家・空き地サポート</span>
         </div>
       </a>
-      <button class="hamburger" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+      <div class="header-actions">
+        <a href="tel:0827-35-6635" class="header-tel-btn">
+          <span class="tel-icon">☎</span>
+          <span class="tel-text">
+            <span class="tel-num">0827-35-6635</span>
+            <span class="tel-hours">受付 平日 8:00〜18:00</span>
+          </span>
+        </a>
+        <button class="hamburger" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </header>
   <div class="overlay"></div>
@@ -39,6 +48,7 @@
       <li><a href="index.html">トップ</a></li>
       <li><a href="service-akiya.html">空き家解体</a></li>
       <li><a href="service-akichi.html">空き地整備</a></li>
+      <li><a href="consultation-mochidashi-zero.html">解体×不動産相談</a></li>
       <li><a href="properties.html">分譲地情報</a></li>
       <li><a href="subsidy.html">補助金情報</a></li>
       <li><a href="works.html">施工実績</a></li>
@@ -64,11 +74,77 @@
     <a href="index.html">トップ</a> <span>›</span> 会社概要
   </div>
 
+  <section class="section-service-detail" id="message">
+    <div class="inner">
+      <div class="section-heading">
+        <span class="en">MESSAGE</span>
+        <h2 class="ja">代表メッセージ</h2>
+      </div>
+      <div class="service-detail-grid">
+        <div class="service-detail-img" style="height:480px;">
+          <img src="images/daihyo.jpg" alt="株式会社義翔工業 代表取締役 岡崎義丈" style="object-position:top center;">
+        </div>
+        <div class="service-detail-text">
+          <h2>「負の財産」を、街の価値に変える</h2>
+          <p>
+            この地域には、使われないまま眠っている土地と家が、たくさんあります。
+            半径1kmを歩けば、空き家や空き地がいくつも目に入る。
+            交通の便も、暮らしやすさも、決して悪くない。
+            それなのに、動かす人がいない——私はそこに、大きな「もったいなさ」と、
+            同じくらい大きな「可能性」を感じています。
+          </p>
+          <p>
+            義翔工業は、ただ建物を壊す会社ではありません。
+            <strong>解体し、土地を活かし、街の価値を高めていく。</strong>
+            壊すことは、その土地の次のはじまりでもあると考えています。
+          </p>
+          <p>
+            家を壊すとき、私たちは壊す前に、その家へ感謝の気持ちで向き合います。
+            雨の日も、風の日も、台風の日も、住む人を守り続けてくれた家です。
+            持ち主の方の心の整理にもつながる、この地域を大切にする私たちなりの区切りだと思っています。
+          </p>
+          <p>
+            一軒一軒、一人ひとりのご事情に向き合い、「負の財産」で終わらせない。
+            その土地にふさわしい活かし方を一緒に考え、この街をもう一度、
+            「人が住みたくなる場所」にしていく。
+            それが、私たちの仕事のいちばんの醍醐味です。
+          </p>
+          <p>
+            土地や空き家のお困りごとがありましたら、どうぞお気軽にご相談ください。
+            売る・貸す・活かす——どの道がご家族にとって一番良いか、一緒に考えさせてください。
+          </p>
+          <p style="margin-top:32px;font-weight:700;color:#0e2a5e;">
+            株式会社義翔工業　代表取締役　岡崎 義丈
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section-company">
     <div class="inner">
+      <div class="company-brand-logo">
+        <img src="images/logo-full.png" alt="GISHO 株式会社義翔工業" width="180" height="168">
+      </div>
       <div class="section-heading">
         <span class="en">COMPANY PROFILE</span>
         <h2 class="ja">会社情報</h2>
+      </div>
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <span class="trust-badge-icon">🛡️</span>
+          <div>
+            <div class="trust-badge-title">建設業許可取得</div>
+            <div class="trust-badge-sub">山口県知事許可（般-6）第22343号</div>
+          </div>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-badge-icon">🛡️</span>
+          <div>
+            <div class="trust-badge-title">宅地建物取引業免許取得</div>
+            <div class="trust-badge-sub">山口県知事（1）第3880号</div>
+          </div>
+        </div>
       </div>
       <table class="company-table">
         <tbody>
@@ -86,26 +162,30 @@
           </tr>
           <tr>
             <th>TEL</th>
-            <td><a href="tel:0827-35-6635" style="color:#1e5fa8;">0827-35-6635</a></td>
+            <td><a href="tel:0827-35-6635" class="link-accent">0827-35-6635</a></td>
           </tr>
           <tr>
             <th>FAX</th>
             <td>0827-35-6636</td>
           </tr>
           <tr>
-            <th>携帯</th>
-            <td><a href="tel:090-8715-7704" style="color:#1e5fa8;">090-8715-7704</a></td>
-          </tr>
-          <tr>
-            <th>メール</th>
-            <td>gisyou.kougyou@grace.ocn.ne.jp</td>
+            <th>携帯（代表直通）</th>
+            <td><a href="tel:090-8715-7704" class="link-accent">090-8715-7704</a></td>
           </tr>
           <tr>
             <th>事業内容</th>
             <td>
               空き家解体工事／空き地整備工事／鳶・土工事／土木工事<br>
-              プラント工事／塗装工事／アスベスト調査・除去／不動産売買
+              プラント工事／塗装工事／アスベスト調査・除去／<a href="consultation-mochidashi-zero.html" class="link-accent">不動産売買（解体×不動産相談はこちら）</a>
             </td>
+          </tr>
+          <tr>
+            <th>建設業許可</th>
+            <td>山口県知事許可（般-6）第22343号</td>
+          </tr>
+          <tr>
+            <th>宅地建物取引業者免許</th>
+            <td>山口県知事（1）第3880号</td>
           </tr>
           <tr>
             <th>対応エリア</th>
@@ -113,12 +193,18 @@
           </tr>
           <tr>
             <th>Instagram</th>
-            <td><a href="https://www.instagram.com/gisyoukougyou/" target="_blank" rel="noopener" style="color:#1e5fa8;">@gisyoukougyou</a></td>
+            <td><a href="https://www.instagram.com/gisyoukougyou/" target="_blank" rel="noopener" class="link-accent">@gisyoukougyou</a></td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
+
+  <div class="section-cta" style="padding:48px 0;">
+    <div class="inner">
+      <a href="contact.html" class="btn-cta-primary">無料相談してみる →</a>
+    </div>
+  </div>
 
   <section class="section-map">
     <div class="inner">
@@ -153,17 +239,21 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-logo-wrap">
-        <div class="logo-mark">義</div>
+        <div class="logo-mark"><img src="images/logo-icon.png" alt="義翔工業"></div>
         <div><div class="footer-company">株式会社義翔工業</div><div class="footer-dept">空き家・空き地サポート</div></div>
       </div>
       <div class="footer-address">〒741-0072 山口県岩国市平田5丁目42-10 山本ビル2階<br>TEL: <a href="tel:0827-35-6635">0827-35-6635</a>　FAX: 0827-35-6636</div>
       <nav class="footer-nav">
-        <a href="index.html">トップ</a><a href="service-akiya.html">空き家解体</a><a href="service-akichi.html">空き地整備</a><a href="properties.html">分譲地情報</a>
-        <a href="subsidy.html">補助金情報</a><a href="works.html">施工実績</a><a href="company.html">会社概要</a><a href="contact.html">お問い合わせ</a>
+        <a href="index.html">トップ</a><a href="service-akiya.html">空き家解体</a><a href="service-akichi.html">空き地整備</a><a href="consultation-mochidashi-zero.html">解体×不動産相談</a>
+        <a href="properties.html">分譲地情報</a><a href="subsidy.html">補助金情報</a><a href="works.html">施工実績</a><a href="company.html">会社概要</a><a href="contact.html">お問い合わせ</a>
       </nav>
       <div class="footer-copy">Copyright &copy; 2026 株式会社義翔工業 All rights reserved.</div>
     </div>
   </footer>
+  <div class="mobile-cta-bar">
+    <a href="tel:0827-35-6635" class="cta-bar-tel">☎ 電話で相談</a>
+    <a href="contact.html" class="cta-bar-form">✉ 無料相談フォーム</a>
+  </div>
   <a href="#" class="back-to-top"><span class="arrow">↑</span><span>TOP</span></a>
   <script src="js/main.js"></script>
 </body>

@@ -61,15 +61,25 @@ header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.35); }
   gap: 12px;
   color: var(--white);
 }
+
+.header-actions { display: flex; align-items: center; gap: 16px; }
+.header-tel-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 16px;
+  background: var(--sky); color: var(--dark);
+  transition: opacity .2s;
+}
+.header-tel-btn:hover { opacity: .85; }
+.header-tel-btn .tel-icon { font-size: 16px; line-height: 1; }
+.header-tel-btn .tel-text { display: flex; flex-direction: column; line-height: 1.3; }
+.header-tel-btn .tel-num { font-size: 14px; font-weight: 900; white-space: nowrap; }
+.header-tel-btn .tel-hours { font-size: 9px; font-weight: 500; }
 .logo-mark {
   width: 40px; height: 40px;
-  background: var(--navy);
-  border: 2px solid var(--sky);
-  border-radius: 6px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 20px; font-weight: 900; color: white;
   flex-shrink: 0;
 }
+.logo-mark img { width: 100%; height: 100%; object-fit: contain; }
 .logo-name { display: block; font-size: 14px; font-weight: 700; color: white; }
 .logo-sub  { display: block; font-size: 10px; color: var(--sky); margin-top: 1px; }
 
@@ -549,6 +559,8 @@ footer { background: var(--dark); padding: 64px 0 32px; }
 
 /* ─── COMPANY PAGE ─── */
 .section-company { padding: 72px 0; background: white; }
+.company-brand-logo { text-align: center; margin-bottom: 32px; }
+.company-brand-logo img { width: 180px; height: auto; }
 .company-table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .company-table th {
   width: 180px; padding: 14px 20px;
@@ -582,6 +594,31 @@ footer { background: var(--dark); padding: 64px 0 32px; }
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+
+/* ─── TRUST BADGES ─── */
+.trust-badges { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+.trust-badge {
+  flex: 1; min-width: 240px;
+  display: flex; align-items: center; gap: 14px;
+  padding: 20px 22px;
+  background: white;
+  border: 1px solid var(--mist); border-left: 4px solid var(--blue);
+}
+.trust-badge-icon { font-size: 26px; flex-shrink: 0; }
+.trust-badge-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.trust-badge-sub { font-size: 11px; color: var(--gray); }
+
+/* ─── MOBILE STICKY CTA BAR ─── */
+.mobile-cta-bar { display: none; }
+.mobile-cta-bar a {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  gap: 6px; font-size: 13px; font-weight: 700; color: white;
+}
+.mobile-cta-bar .cta-bar-tel  { background: var(--blue); }
+.mobile-cta-bar .cta-bar-form { background: var(--navy); }
+
+/* ─── LINK ACCENT ─── */
+.link-accent { color: var(--blue); }
 
 /* ─── SUBSIDY PAGE ─── */
 .section-subsidy { padding: 72px 0; background: white; }
@@ -618,6 +655,19 @@ footer { background: var(--dark); padding: 64px 0 32px; }
   .footer-nav a { width: 50%; }
   .cta-tel { font-size: 28px; }
   .company-table th { width: 120px; }
+  .trust-badges { flex-direction: column; }
+
+  .header-tel-btn { padding: 0; width: 40px; height: 40px; justify-content: center; border-radius: 50%; }
+  .header-tel-btn .tel-text { display: none; }
+  .header-tel-btn .tel-icon { font-size: 18px; }
+
+  .mobile-cta-bar {
+    display: flex;
+    position: fixed; left: 0; bottom: 0; width: 100%;
+    height: 60px; z-index: 900;
+  }
+  body { padding-bottom: 60px; }
+  .back-to-top { bottom: 76px; }
 }
 @media (max-width: 480px) {
   .worries-grid { grid-template-columns: 1fr; }
