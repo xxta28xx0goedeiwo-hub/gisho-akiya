@@ -691,7 +691,14 @@ footer { background: var(--dark); padding: 64px 0 32px; }
 .wizard-progress-label { font-size: 12px; font-weight: 700; color: var(--gray); white-space: nowrap; }
 .wizard-body { padding: 32px 28px; }
 .wizard-step { display: none; }
-.wizard-step.active { display: block; }
+.wizard-step.active { display: block; animation: wizardStepIn .45s ease; }
+@keyframes wizardStepIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wizard-step.active { animation: none; }
+}
 .wizard-q { font-size: 16px; font-weight: 900; color: var(--navy); margin-bottom: 20px; }
 .wizard-list { display: flex; flex-direction: column; gap: 10px; }
 .wizard-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }

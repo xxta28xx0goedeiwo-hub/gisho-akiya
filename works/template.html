@@ -1,0 +1,204 @@
+<!--
+  施工実績ページ テンプレート（使い方は works/README.md を参照）
+  新規案件を追加する手順:
+  1. このファイルをコピーして works/<案件slug>.html として保存（例: works/iwakuni-heiwa-akiya.html）
+  2. {{ }} で囲まれた箇所をすべて実データに置き換える（メモと写真を渡してもらえば作成可能）
+  3. 写真は images/works/<案件slug>/ 配下に配置（施工前 before-01.jpg, 施工後 after-01.jpg 等の命名を推奨）
+  4. works.html の一覧（works-grid-full内）にカードを1枚追加し、このページへリンクする
+  5. sitemap.xmlに新URL（https://gishou-kougyou.com/works/<案件slug>.html）を追加する
+-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{地域名（市町名まで）}}{{工種}}｜施工実績｜義翔工業</title>
+  <meta name="description" content="{{地域名}}で行った{{工種}}の施工実績。{{建物種別・規模}}、工期{{工期}}。義翔工業が近隣配慮を徹底しながら安全に施工しました。無料相談受付中。">
+  <link rel="canonical" href="https://gishou-kougyou.com/works/{{slug}}.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="株式会社義翔工業 空き家サポート">
+  <meta property="og:title" content="{{地域名（市町名まで）}}{{工種}}｜施工実績｜義翔工業">
+  <meta property="og:description" content="{{地域名}}で行った{{工種}}の施工実績。{{建物種別・規模}}、工期{{工期}}。">
+  <meta property="og:url" content="https://gishou-kougyou.com/works/{{slug}}.html">
+  <meta property="og:image" content="https://gishou-kougyou.com/images/works/{{slug}}/after-01.jpg">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "株式会社義翔工業",
+    "image": "https://gishou-kougyou.com/images/works/{{slug}}/after-01.jpg",
+    "url": "https://gishou-kougyou.com/works/{{slug}}.html",
+    "telephone": "+81-827-35-6635",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "平田5丁目42-10 山本ビル2階",
+      "addressLocality": "岩国市",
+      "addressRegion": "山口県",
+      "postalCode": "741-0072",
+      "addressCountry": "JP"
+    },
+    "areaServed": ["岩国市", "柳井市", "周南市", "下松市", "光市", "和木町", "山口県"],
+    "description": "山口県岩国市を拠点に、柳井市・周南市・下松市・光市・和木町など山口県東部エリアを中心に空き家解体・空き地整備・アスベスト調査を行う工事会社です。",
+    "openingHours": "Mo-Fr 08:00-18:00",
+    "sameAs": ["https://www.instagram.com/gisyoukougyou/"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c163e944b46041adb48ec0cebb12b1c0"}'></script><!-- End Cloudflare Web Analytics -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KH27YKX3B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6KH27YKX3B');
+  </script>
+</head>
+<body>
+
+  <header id="header">
+    <div class="header-inner">
+      <a href="../index.html" class="header-logo">
+        <div class="logo-mark"><img src="../images/logo-icon.png" alt="義翔工業"></div>
+        <div>
+          <span class="logo-name">株式会社義翔工業</span>
+          <span class="logo-sub">空き家・空き地サポート</span>
+        </div>
+      </a>
+      <div class="header-actions">
+        <a href="tel:0827-35-6635" class="header-tel-btn">
+          <span class="tel-icon">☎</span>
+          <span class="tel-text">
+            <span class="tel-num">0827-35-6635</span>
+            <span class="tel-hours">受付 平日 8:00〜18:00</span>
+          </span>
+        </a>
+        <button class="hamburger" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="overlay"></div>
+  <nav class="nav-drawer">
+    <ul>
+      <li><a href="../index.html">トップ</a></li>
+      <li><a href="../service-akiya.html">空き家解体</a></li>
+      <li><a href="../service-akichi.html">空き地整備</a></li>
+      <li><a href="../consultation-mochidashi-zero.html">解体×不動産相談</a></li>
+      <li><a href="../properties.html">分譲地情報</a></li>
+      <li><a href="../subsidy.html">補助金情報</a></li>
+      <li><a href="../works.html">施工実績</a></li>
+      <li><a href="../company.html">会社概要</a></li>
+      <li><a href="../contact.html">お問い合わせ</a></li>
+    </ul>
+    <div class="drawer-tel">
+      <a href="tel:0827-35-6635">☎ 0827-35-6635</a>
+      <span>受付 平日 8:00〜18:00</span>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <span class="en-label">WORKS</span>
+      <h1>{{地域名（市町名まで）}} {{建物種別・規模}} {{工種}}</h1>
+      <p class="page-desc">{{一言サマリー（例：近隣への配慮を徹底し、◯週間で安全に施工しました）}}</p>
+    </div>
+  </section>
+  <div class="breadcrumb">
+    <a href="../index.html">トップ</a> <span>›</span> <a href="../works.html">施工実績</a> <span>›</span> {{地域名（市町名まで）}}{{工種}}
+  </div>
+
+  <!-- 案件概要テーブル -->
+  <section class="section-service-detail">
+    <div class="inner">
+      <table class="company-table">
+        <tbody>
+          <tr><th>施工場所</th><td>{{地域名（市町名まで。番地等の個人情報は記載しない）}}</td></tr>
+          <tr><th>工種</th><td>{{工種（例：木造住宅解体工事）}}</td></tr>
+          <tr><th>建物種別・規模</th><td>{{例：木造2階建て／延床30坪}}</td></tr>
+          <tr><th>工期</th><td>{{例：約2週間（20XX年X月〜X月）}}</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 施工前後写真 -->
+  <section style="padding:72px 0; background:var(--light);">
+    <div class="inner">
+      <div class="section-heading">
+        <span class="en">BEFORE / AFTER</span>
+        <h2 class="ja">施工前・施工後</h2>
+      </div>
+      <div class="service-detail-grid">
+        <div class="service-detail-img">
+          <img src="../images/works/{{slug}}/before-01.jpg" alt="{{地域名}}{{工種}} 施工前" loading="lazy">
+          <p style="text-align:center;font-size:12px;color:#6b7280;margin-top:8px;">施工前</p>
+        </div>
+        <div class="service-detail-img">
+          <img src="../images/works/{{slug}}/after-01.jpg" alt="{{地域名}}{{工種}} 施工後" loading="lazy">
+          <p style="text-align:center;font-size:12px;color:#6b7280;margin-top:8px;">施工後</p>
+        </div>
+      </div>
+      <!-- 写真を追加する場合は上記 service-detail-grid ブロックをコピーして増やす -->
+    </div>
+  </section>
+
+  <!-- 担当者コメント -->
+  <section class="section-service-detail">
+    <div class="inner">
+      <div class="section-heading">
+        <span class="en">COMMENT</span>
+        <h2 class="ja">担当者コメント</h2>
+      </div>
+      <div style="max-width:680px;margin:0 auto;background:#eaf4fb;padding:28px 32px;border-radius:4px;">
+        <p style="font-size:13px;color:#374151;line-height:2;">
+          {{担当者コメント。施工上の工夫・お客様の反応・近隣配慮など、現場の一言を記載}}
+        </p>
+        <p style="margin-top:16px;font-weight:700;color:#0e2a5e;font-size:13px;">株式会社義翔工業</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-cta">
+    <div class="inner">
+      <p class="cta-sub">FREE CONSULTATION</p>
+      <h2>まずは無料でご相談ください</h2>
+      <p class="cta-text">同じようなお悩みをお持ちの方は、お気軽にご相談ください。相談・お見積もりは無料です。</p>
+      <div class="cta-tel-wrap">
+        <a href="tel:0827-35-6635" class="cta-tel">0827-35-6635</a>
+        <span class="cta-hours">受付時間 平日 8:00〜18:00</span>
+      </div>
+      <div class="cta-btns">
+        <a href="../contact.html" class="btn-cta-primary">無料相談フォームへ</a>
+        <a href="../works.html" class="btn-cta-outline">他の施工実績を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo-wrap">
+        <div class="logo-mark"><img src="../images/logo-icon.png" alt="義翔工業"></div>
+        <div><div class="footer-company">株式会社義翔工業</div><div class="footer-dept">空き家・空き地サポート</div></div>
+      </div>
+      <div class="footer-address">〒741-0072 山口県岩国市平田5丁目42-10 山本ビル2階<br>TEL: <a href="tel:0827-35-6635">0827-35-6635</a>　FAX: 0827-35-6636</div>
+      <nav class="footer-nav">
+        <a href="../index.html">トップ</a><a href="../service-akiya.html">空き家解体</a><a href="../service-akichi.html">空き地整備</a><a href="../consultation-mochidashi-zero.html">解体×不動産相談</a>
+        <a href="../properties.html">分譲地情報</a><a href="../subsidy.html">補助金情報</a><a href="../works.html">施工実績</a><a href="../company.html">会社概要</a><a href="../contact.html">お問い合わせ</a>
+      </nav>
+      <div class="footer-copy">Copyright &copy; 2026 株式会社義翔工業 All rights reserved.</div>
+    </div>
+  </footer>
+  <div class="mobile-cta-bar">
+    <a href="tel:0827-35-6635" class="cta-bar-tel">☎ 電話で相談</a>
+    <a href="../contact.html" class="cta-bar-form">✉ 無料相談フォーム</a>
+  </div>
+  <a href="#" class="back-to-top"><span class="arrow">↑</span><span>TOP</span></a>
+  <script src="../js/main.js"></script>
+</body>
+</html>

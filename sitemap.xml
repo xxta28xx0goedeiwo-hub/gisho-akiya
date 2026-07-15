@@ -13,6 +13,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gishou-kougyou.com/kaitai-iwakuni.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gishou-kougyou.com/akiya-kaitai.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gishou-kougyou.com/kaitai-hiyou.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gishou-kougyou.com/naisou-kaitai.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://gishou-kougyou.com/consultation-mochidashi-zero.html</loc>
     <priority>0.8</priority>
   </url>
@@ -30,6 +46,10 @@
   </url>
   <url>
     <loc>https://gishou-kougyou.com/company.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gishou-kougyou.com/faq.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
