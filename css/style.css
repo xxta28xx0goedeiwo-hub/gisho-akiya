@@ -194,13 +194,6 @@ header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.35); }
 }
 .btn-outline:hover { background: white; color: var(--dark); }
 
-/* シルエット */
-.hero-silhouette {
-  position: absolute; bottom: 0; left: 0;
-  width: 100%; z-index: 2; line-height: 0;
-}
-.hero-silhouette svg { width: 100%; display: block; }
-
 /* ─── SECTION HEADING ─── */
 .section-heading { text-align: center; margin-bottom: 56px; }
 .section-heading .en {
@@ -231,6 +224,19 @@ header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.35); }
 .worries-lead {
   text-align: center; font-size: 18px; font-weight: 700;
   color: var(--navy); line-height: 2.2;
+}
+.worries-grid.is-five { grid-template-columns: repeat(3, 1fr); }
+
+/* ─── ENKYORI (遠方にお住まいの方へ) ─── */
+.section-enkyori { padding: 88px 0; background: var(--light); }
+.enkyori-lead {
+  max-width: 640px; margin: 0 auto 40px;
+  text-align: center; font-size: 14px; color: var(--text); line-height: 2;
+}
+.enkyori-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; margin-bottom: 40px;
 }
 
 /* ─── SERVICE BLOCKS ─── */
@@ -637,6 +643,7 @@ footer { background: var(--dark); padding: 64px 0 32px; }
 /* ─── RESPONSIVE ─── */
 @media (max-width: 1024px) {
   .worries-grid  { grid-template-columns: repeat(2, 1fr); }
+  .worries-grid.is-five { grid-template-columns: repeat(2, 1fr); }
   .reasons-grid  { grid-template-columns: repeat(2, 1fr); }
   .works-grid, .works-grid-full { grid-template-columns: repeat(2, 1fr); }
   .service-detail-grid { grid-template-columns: 1fr; }
@@ -648,6 +655,7 @@ footer { background: var(--dark); padding: 64px 0 32px; }
   .hero-text { font-size: 13px; }
   .hero-btns { flex-direction: column; align-items: flex-start; }
   .service-block { min-height: 52vh; }
+  .enkyori-grid { grid-template-columns: 1fr; }
   .flow-steps { flex-wrap: wrap; gap: 16px; }
   .flow-item { width: calc(33% - 12px); min-width: 90px; }
   .flow-item::after { display: none; }
@@ -671,6 +679,7 @@ footer { background: var(--dark); padding: 64px 0 32px; }
 }
 @media (max-width: 480px) {
   .worries-grid { grid-template-columns: 1fr; }
+  .worries-grid.is-five { grid-template-columns: 1fr; }
   .reasons-grid { grid-template-columns: 1fr; }
   .footer-nav a { width: 100%; }
   .hero-btns a { width: 100%; text-align: center; }
